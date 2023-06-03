@@ -59,8 +59,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: main
+          release_name: rel
           files: libv2ray*r
           prerelease: false
           generate_release_notes: true
