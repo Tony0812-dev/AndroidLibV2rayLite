@@ -55,3 +55,12 @@ jobs:
           path: |
             libv2ray.aar
             libv2ray-sources.jar
+      
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          files: libv2ray*r
+          prerelease: false
+          generate_release_notes: true
